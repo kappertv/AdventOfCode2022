@@ -8,22 +8,22 @@ public class ElfAnalyzer
 
     private void ReadLines(string[] lines)
     {
-        Elf current = new Elf();
+        var foods = new List<Food>();
         foreach (var line in lines)
         {
             line.Trim();
             if (line.Equals(String.Empty))
             {
-                elves.Add(current);
-                current = new Elf();
+                elves.Add(new Elf(foods));
+                foods = new List<Food>();
             }
             else
             {
                 int calories = int.Parse(line);
-                current.Foods.Add(new Food(calories));
+                foods.Add(new Food(calories));
             }
         }
-        elves.Add(current);
+        elves.Add(new Elf(foods));
     }
 
     private List<Elf> elves = new List<Elf>();

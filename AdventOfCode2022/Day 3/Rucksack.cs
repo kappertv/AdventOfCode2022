@@ -1,16 +1,8 @@
 ﻿using System;
 namespace AdventOfCode2022.Day3
 {
-	public class Rucksack
+	public record Rucksack(string Line)
 	{
-
-		public Rucksack(string line)
-		{
-            Line = line;
-        }
-
-        public string Line { get; }
-
         public int GetPriority()
         {
             int halflength = Line.Length / 2;

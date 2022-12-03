@@ -1,17 +1,8 @@
 ﻿using System;
 namespace AdventOfCode2022.Day2
 {
-	public class Round
+	public record Round(RockPaperScissor Opponent, RockPaperScissor Self)
 	{
-        public RockPaperScissor Opponent { get; }
-        public RockPaperScissor Self { get; }
-
-        public Round(RockPaperScissor opponent, RockPaperScissor self)
-		{
-            Opponent = opponent;
-            Self = self;
-        }
-
         // Rock defeats Scissors, Scissors defeats Paper, and Paper defeats Rock. 
         public long GetScore()
         {
