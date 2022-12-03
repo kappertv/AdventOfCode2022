@@ -20,27 +20,16 @@ namespace AdventOfCode2022.Day2
             }
         }
 
-        private RockPaperScissor GetPaperRockScissors(char enumerable)
+        private RockPaperScissor GetPaperRockScissors(char enumerable) => enumerable switch
         {
-            switch (enumerable)
-            {
-                case 'A':
-                    return RockPaperScissor.Rock;
-                case 'B':
-                    return RockPaperScissor.Paper;
-                case 'C':
-                    return RockPaperScissor.Scissor;
-
-                case 'X':
-                    return RockPaperScissor.Rock;
-                case 'Y':
-                    return RockPaperScissor.Paper;
-                case 'Z':
-                    return RockPaperScissor.Scissor;
-
-            }
-            throw new InvalidOperationException();
-        }
+            'A' => RockPaperScissor.Rock,
+            'B' => RockPaperScissor.Paper,
+            'C' => RockPaperScissor.Scissor,
+            'X' => RockPaperScissor.Rock,
+            'Y' => RockPaperScissor.Paper,
+            'Z' => RockPaperScissor.Scissor,
+            _ => throw new ArgumentException($"Not expected value of character:{enumerable}", nameof(enumerable)),
+        };
 
         public long GetScore()
         {
