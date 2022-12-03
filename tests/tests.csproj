@@ -1,0 +1,53 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.3.2" />
+    <PackageReference Include="MSTest.TestAdapter" Version="2.2.10" />
+    <PackageReference Include="MSTest.TestFramework" Version="2.2.10" />
+    <PackageReference Include="coverlet.collector" Version="3.1.2" />
+    <PackageReference Include="Shouldly" Version="4.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Day 1\" />
+    <None Remove="Shouldly" />
+    <None Remove="Day 2\" />
+    <None Remove="Day 3\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Day 1\" />
+    <Folder Include="Day 2\" />
+    <Folder Include="Day 3\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AdventOfCode2022\AdventOfCode2022.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Day 1\sampleinput.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Day 2\input.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Day 2\sampleinput.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Day 3\sampleinput.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Day 3\input.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Day 1\input.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>
