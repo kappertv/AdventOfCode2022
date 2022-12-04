@@ -1,36 +1,31 @@
-﻿using System;
-namespace AdventOfCode2022.Day4
-{
-	public record AssignmentPair(Range rangeone, Range rangetwo) {
+﻿namespace AdventOfCode2022.Day4;
 
-		public bool IsFullyOverlapped()
-		{
-			return rangeone.FullyOverlaps(rangetwo) || rangetwo.FullyOverlaps(rangeone);
-        }
+public record AssignmentPair(SectionRange rangeone, SectionRange rangetwo) {
 
-        public bool IsOverlapped()
-        {
-            return rangeone.Overlaps(rangetwo);
-        }
+    public bool IsFullyOverlapped()
+    {
+        return rangeone.FullyOverlaps(rangetwo) || rangetwo.FullyOverlaps(rangeone);
     }
 
-	public static class Extensions
-	{
-        public static bool FullyOverlaps(this Range one, Range two)
-        {
-            return
-                one.Start.Value <= two.Start.Value &&
-                one.End.Value >= two.End.Value &&
-                two.Start.Value <= one.End.Value;
-        }
+    public bool IsOverlapped()
+    {
+        return rangeone.Overlaps(rangetwo);
+    }
+}
 
-        public static bool Overlaps(this Range one, Range two)
-        {
-            return
-                one.End.Value >= two.Start.Value &&
-                one.Start.Value <= two.End.Value;
-        }
+public static class Extensions {
+    public static bool FullyOverlaps(this SectionRange one, SectionRange two)
+    {
+        return
+            (one.Start >= two.Start &&
+             one.End <= two.End);
     }
 
+    public static bool Overlaps(this SectionRange one, SectionRange two)
+    {
+        return
+            one.End >= two.Start &&
+            one.Start <= two.End;
+    }
 }
 
