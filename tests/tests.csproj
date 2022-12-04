@@ -23,11 +23,13 @@
     <None Remove="Shouldly" />
     <None Remove="Day 2\" />
     <None Remove="Day 3\" />
+    <None Remove="Day 4\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Day 1\" />
     <Folder Include="Day 2\" />
     <Folder Include="Day 3\" />
+    <Folder Include="Day 4\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AdventOfCode2022\AdventOfCode2022.csproj" />
@@ -49,6 +51,12 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="Day 1\input.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Day 4\sampleinput.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Day 4\input.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
