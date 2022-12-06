@@ -25,6 +25,7 @@
     <None Remove="Day 3\" />
     <None Remove="Day 4\" />
     <None Remove="Day 5\" />
+    <None Remove="Day 6\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Day 1\" />
@@ -32,6 +33,7 @@
     <Folder Include="Day 3\" />
     <Folder Include="Day 4\" />
     <Folder Include="Day 5\" />
+    <Folder Include="Day 6\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AdventOfCode2022\AdventOfCode2022.csproj" />

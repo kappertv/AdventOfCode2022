@@ -104,23 +104,13 @@ namespace Day5.AdventOfCode2022
         public string GetMessage()
         {
             ProcessInstructions(false);
-            var result = "";
-            for (int i=0;i<stacksOfCrates.Count;i++)
-            {
-                result += stacksOfCrates[i+1].Pop();
-            }
-            return result;
+            return new string(stacksOfCrates.Select(s => s.Value.Pop()).ToArray());
         }
 
-        public object GetMessagePart2()
+        public string GetMessagePart2()
         {
             ProcessInstructions(true);
-            var result = "";
-            for (int i = 0; i < stacksOfCrates.Count; i++)
-            {
-                result += stacksOfCrates[i + 1].Pop();
-            }
-            return result;
+            return new string(stacksOfCrates.Select(s => s.Value.Pop()).ToArray());
         }
     }
 
