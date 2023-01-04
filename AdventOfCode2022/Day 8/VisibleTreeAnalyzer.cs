@@ -46,11 +46,7 @@ namespace AdventOfCode2022.Day8
         private bool IsVisibleTree(int ver, int hor)
         {
             var height = forest[ver, hor];
-            //var left = GetAllLeft(ver, hor);
-            //var right = forest[ver, hor + 1];
-            //var up = forest[ver - 1, hor];
-            //var down = forest[ver + 1, hor];
-
+            
             var all = new List<bool>();
             all.Add(GetAllLeft(ver, hor));
             all.Add(GetAllRight(ver, hor));

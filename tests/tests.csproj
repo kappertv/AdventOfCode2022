@@ -9,9 +9,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.4.0" />
-    <PackageReference Include="MSTest.TestAdapter" Version="2.2.10" />
-    <PackageReference Include="MSTest.TestFramework" Version="2.2.10" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.4.1" />
+    <PackageReference Include="MSTest.TestAdapter" Version="3.0.1" />
+    <PackageReference Include="MSTest.TestFramework" Version="3.0.1" />
     <PackageReference Include="coverlet.collector" Version="3.2.0"><IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 <PrivateAssets>all</PrivateAssets>
 </PackageReference>
@@ -28,6 +28,8 @@
     <None Remove="Day 6\" />
     <None Remove="Day 7\" />
     <None Remove="Day 8\" />
+    <None Remove="Day 9\" />
+    <None Remove="Day 11\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Day 1\" />
@@ -38,6 +40,8 @@
     <Folder Include="Day 6\" />
     <Folder Include="Day 7\" />
     <Folder Include="Day 8\" />
+    <Folder Include="Day 9\" />
+    <Folder Include="Day 11\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AdventOfCode2022\AdventOfCode2022.csproj" />
@@ -86,6 +90,18 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="Day 8\input.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Day 9\sampleinput.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Day 9\input.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Day 11\sampleinput.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Day 11\input.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
